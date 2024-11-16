@@ -1,5 +1,4 @@
-﻿// SKU = Stock Keeping Unit. 
-// SKU value format: <product #>-<2-letter color code>-<size code>
+﻿// SKU = Stock Keeping Unit
 string sku = "01-MN-L";
 
 string[] product = sku.Split('-');
@@ -11,55 +10,46 @@ string size = "";
 switch (product[0])
 {
     case "01":
-    type = "Sweat Shirt";
-    break;
-
+        type = "Sweat shirt";
+        break;
     case "02":
-    type = "T-Shirt";
-    break;
-
+        type = "T-Shirt";
+        break;
     case "03":
-    type = "Sweat pants";
-    break;
-
+        type = "Sweat pants";
+        break;
     default:
-    type = "Other";
-    break;
-} 
-
-switch(product[1])
-{
-    case "BL":
-    type = "Black";
-    break;
-
-    case "MN":
-    type = "Maroon";
-    break;
-
-    default:
-    type = "White";
-    break;
+        type = "Other";
+        break;
 }
 
-switch(product[2])
+switch (product[1])
+{
+    case "BL":
+        color = "Black";
+        break;
+    case "MN":
+        color = "Maroon";
+        break;
+    default:
+        color = "White";
+        break;
+}
+
+switch (product[2])
 {
     case "S":
-    type = "Small";
-    break;
-
+        size = "Small";
+        break;
     case "M":
-    type = "Medium";
-    break;
-
+        size = "Medium";
+        break;
     case "L":
-    type = "Large";
-    break;
-
+        size = "Large";
+        break;
     default:
-    type = "One Size Fits All";
-    break;
-
+        size = "One Size Fits All";
+        break;
 }
 
 Console.WriteLine($"Product: {size} {color} {type}");
